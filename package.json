@@ -1,10 +1,13 @@
 {
-  "name": "sentry-cordova",
-  "version": "1.0.3",
+  "name": "@cloudscapelabs/sentry-cordova",
+  "version": "1.0.3-csl1",
   "main": "dist/js/sentry-cordova.js",
   "types": "dist/js/sentry-cordova.d.ts",
   "license": "MIT",
-  "repository": "git://github.com/getsentry/sentry-cordova.git",
+  "repository": "git://github.com/cloudscapelabs/sentry-cordova.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "cordova": {
     "id": "sentry-cordova",
     "platforms": [
