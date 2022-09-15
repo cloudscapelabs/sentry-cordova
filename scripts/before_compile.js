@@ -1,14 +1,14 @@
 module.exports = function (ctx) {
-  console.log(`Sentry: running ${ctx.hook} - set SENTRY_SKIP_AUTO_RELEASE=true to skip this`);
+  if (process.env.SENTRY_RUN_AUTO_RELEASE !== 'true') {
+    console.log('Sentry: Skipping Sentry auto release');
+    return;
+  }
+
   const SentryCli = require('@sentry/cli');
   const path = require('path');
   const fs = require('fs');
   const crypto = require('crypto');
 
-  if (process.env.SENTRY_SKIP_AUTO_RELEASE) {
-    console.log('Sentry: Skipping Sentry auto release');
-    return;
-  }
 
   function checksum(str) {
     return crypto

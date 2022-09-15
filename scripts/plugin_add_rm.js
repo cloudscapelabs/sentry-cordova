@@ -5,9 +5,7 @@ module.exports = function(ctx) {
     }
   } catch (e) {}
 
-  console.log(`Sentry: running ${ctx.hook} - set SENTRY_SKIP_WIZARD=true to skip this`);
-
-  if (process.env.SENTRY_SKIP_WIZARD) {
+  if (process.env.SENTRY_RUN_WIZARD !== 'true') {
     console.log('Sentry: Skipping Sentry Wizard');
     return;
   }
