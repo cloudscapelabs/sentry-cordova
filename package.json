@@ -1,6 +1,6 @@
 {
   "name": "@cloudscapelabs/sentry-cordova",
-  "version": "1.0.3-csl1",
+  "version": "1.0.3-csl2",
   "main": "dist/js/sentry-cordova.js",
   "types": "dist/js/sentry-cordova.d.ts",
   "license": "MIT",
@@ -60,7 +60,8 @@
   "scripts": {
     "build:bundle": "rollup --config",
     "build:typescript": "tsc -p tsconfig.build.json",
-    "build": "run-s clean build:typescript build:bundle",
+    "build:ios": "make build",
+    "build": "run-s clean build:typescript build:bundle build:ios",
     "clean": "rimraf dist coverage",
     "jest": "jest",
     "test:watch": "jest --watch",
