@@ -1,9 +1,9 @@
-module.exports = function(ctx) {
+module.exports = function (ctx) {
   try {
     if (!ctx.opts.plugins.some(plugin => plugin.includes('sentry-cordova'))) {
       return;
     }
-  } catch (e) {}
+  } catch (e) { }
 
   if (process.env.SENTRY_RUN_WIZARD !== 'true') {
     console.log('Sentry: Skipping Sentry Wizard');
