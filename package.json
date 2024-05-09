@@ -1,6 +1,6 @@
 {
   "name": "@cloudscapelabs/sentry-cordova",
-  "version": "1.3.0-csl1",
+  "version": "1.3.0-csl2",
   "main": "dist/js/sentry-cordova.js",
   "types": "dist/js/sentry-cordova.d.ts",
   "license": "MIT",
