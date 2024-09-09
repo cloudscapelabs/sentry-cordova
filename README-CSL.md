@@ -1,3 +1,5 @@
+Install carthage: brew install carthage
+
 Ensure master is up-to-date with upstream.
 
 Merge in latest master (fixing conflicts in package name / version);
