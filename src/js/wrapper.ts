@@ -95,7 +95,7 @@ export const NATIVE = {
 
     const headerString = JSON.stringify(envelopeHeader);
     let envelopeBytes: number[] = utf8ToBytes(headerString);
-    envelopeBytes.push(EOL);
+    envelopeBytes.push(EOL!);
 
     for (const rawItem of envelopeItems) {
       const [itemHeader, itemPayload] = this._processItem(rawItem);
@@ -120,9 +120,9 @@ export const NATIVE = {
       const serializedItemHeader = JSON.stringify(itemHeader);
 
       envelopeBytes.push(...utf8ToBytes(serializedItemHeader));
-      envelopeBytes.push(EOL);
+      envelopeBytes.push(EOL!);
       envelopeBytes = envelopeBytes.concat(bytesPayload);
-      envelopeBytes.push(EOL);
+      envelopeBytes.push(EOL!);
     }
     await this._nativeCall('captureEnvelope', { envelope: envelopeBytes });
   },
