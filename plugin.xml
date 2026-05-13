@@ -50,7 +50,11 @@
 
         <!-- We don't have a resource-file here since this adds it to Xcode project -->
 
-        <framework src="src/ios/Carthage/Build/Sentry.xcframework" custom="true" embed="true" />
+      <podspec>
+        <pods>
+          <pod name="Sentry/HybridSDK" spec="~> 8.0" />
+        </pods>
+      </podspec>
     </platform>
 
     <!-- browser -->

@@ -165,7 +165,7 @@ NSString * const nativeSdkName = @"sentry.cocoa.cordova";
     #if DEBUG
         [PrivateSentrySDKOnly captureEnvelope:envelope];
     #else
-        if (commandDictionary[@'store']) {
+        if (commandDictionary[@"store"]) {
             // Storing to disk happens asynchronously with captureEnvelope
             [PrivateSentrySDKOnly storeEnvelope:envelope];
         } else {
